@@ -5,7 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
-    base: '/Portfolio-Yellow-Style-Dark-Mode/',
+    base: '/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
