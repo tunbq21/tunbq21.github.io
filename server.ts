@@ -20,21 +20,44 @@ async function startServer() {
       const apiKey = process.env.GEMINI_API_KEY;
       if (!apiKey) {
         return res.json({
-          answer: "GEMINI_API_KEY is not configured yet. Here is a summary: Alex Vance is a candidate for SMU's Master of IT in Business (MITB), bridging marketing strategy, business analytics, UI/UX design, and full-stack software development.",
+          answer: "GEMINI_API_KEY is not configured yet. Bui Quang Tuan is an AI Engineer at FPT Software, specializing in autonomous AI agents, RAG architectures with Vector Databases, and enterprise-scale data pipelines on Azure and GCP.",
           fallback: true
         });
       }
 
       const ai = new GoogleGenAI({ apiKey });
       const prompt = `
-You are the AI Representative for Alex Vance, an applicant for Singapore Management University's (SMU) Master of IT in Business (MITB) program.
-Alex's Background:
-- Marketing & Business Strategy (B.B.A / Brand Marketing & Consumer Analytics background)
-- Self-taught Full-Stack Developer & Systems Architect (TypeScript, React, Node.js, Python, Data Pipelines)
-- Intersection: Combining marketing psychology, human-centered UI design, and data-driven algorithmic systems to solve complex business problems.
-- Key Goal at SMU MITB: Master Enterprise AI, Financial/Retail Analytics, and Algorithmic Decision Systems to lead tech-driven business transformation.
+You are the AI Representative for Bui Quang Tuan, an AI Engineer currently working at FPT Software (Ho Chi Minh City, Vietnam).
 
-Answer the user's question concisely, professionally, and persuasively in 2-3 short paragraphs or clean bullet points, highlighting why Alex is an ideal fit for SMU MITB and modern tech leadership.
+Tuan's Professional Profile:
+- Current Role: AI Engineer @ FPT Software (Feb 2026 - Present)
+- Previous Roles: AI Engineer @ Thien AN Company (Sep 2025 - Dec 2025), FullStack Developer @ SenDo E-commerce (Dec 2024 - May 2025)
+- Education: Bachelor of Software Engineering, FPT University (GPA 3.21/4.0, 2021-2025)
+
+Core Technical Specializations:
+- AI Agents & Automation: Engineered autonomous AI agents using advanced prompt engineering, custom tool integrations. Automated social media management (Facebook, TikTok, Instagram, Zalo) and OCR for invoice processing.
+- RAG Systems: Implemented Retrieval-Augmented Generation architectures with Vector Databases, enabling AI agents to accurately answer domain-specific queries.
+- Data Engineering: Developed end-to-end ETL pipelines processing 50M+ rows, ingesting into Data Lakes and Data Warehouses. Azure (ADF, Databricks, Synapse Analytics, ADLS Gen2), GCP (Dataproc, GCS), AWS (EC2, S3).
+- Full-Stack AI Apps: Designed and developed AI-powered web applications with RESTful APIs to deliver real-time interactive experiences.
+- AI Cost Optimization: Monitored and controlled token consumption, conducted rigorous prompt testing, balanced model performance with budget constraints.
+- Workflow Automation: Built complex automated workflows with n8n for email, social media, and AI service integrations.
+
+Key Projects:
+- AI Agent Job Search Platform (Jul 2026): Google Gemini API, FastAPI, SQLite, PyPDF2 — intelligent resume parsing and job matching. GitHub: github.com/tunbq21/AI-Agent-Job-Search
+- Azure Big Data Pipeline (Jan 2026): Full Medallion Architecture (Bronze-Silver-Gold) on Azure — ADF, Databricks (PySpark), Synapse Analytics, Delta Lake. GitHub: github.com/tunbq21/BigData_Project
+
+Contact:
+- Email: tbuiquang2002@gmail.com
+- LinkedIn: linkedin.com/in/tunbq21
+- GitHub: github.com/tunbq21
+- Phone: (+84) 862-319-477
+
+Achievements:
+- Top 2 at Rocket Boost Entrepreneurial StartUp Competition (Dec 2024)
+- Top 3 at Research Festival Competition (2023-2024)
+- Certifications: Big Data Engineering with GCP & Azure, Apache Airflow, AWS Solutions Architect Associate
+
+Answer the recruiter's or visitor's question concisely, professionally, and persuasively in 2-3 short paragraphs or clean bullet points, highlighting Tuan's technical depth, hands-on experience, and growth trajectory as an AI Engineer.
 
 User's Question: "${question}"
       `;
@@ -59,7 +82,7 @@ User's Question: "${question}"
 
   // Health check
   app.get("/api/health", (_req, res) => {
-    res.json({ status: "ok", app: "Alex Vance SMU MITB Portfolio" });
+    res.json({ status: "ok", app: "Bui Quang Tuan — AI Engineer Portfolio" });
   });
 
   // Vite Middleware in Dev or Static in Production

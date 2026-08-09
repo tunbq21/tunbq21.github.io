@@ -105,9 +105,9 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
           
           <div className="flex items-center space-x-3">
-            <span className="font-bold text-amber-600 dark:text-amber-400">AV // {PERSONAL_INFO.name}</span>
+            <span className="font-bold text-amber-600 dark:text-amber-400">TBQ // {PERSONAL_INFO.name}</span>
             <span>—</span>
-            <span>SMU Master of IT in Business Applicant</span>
+            <span>AI Engineer @ FPT Software</span>
           </div>
 
           <div className="flex items-center space-x-4">
@@ -116,7 +116,7 @@ export default function App() {
               className="hover:text-amber-500 transition-colors flex items-center space-x-1 cursor-pointer"
             >
               <GraduationCap className="w-3.5 h-3.5 text-amber-500" />
-              <span>MITB Pitch Deck</span>
+              <span>Career Pitch Deck</span>
             </button>
 
             <button

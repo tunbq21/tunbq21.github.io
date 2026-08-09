@@ -26,7 +26,7 @@ export const AiAssistantDrawer: React.FC<AiAssistantDrawerProps> = ({
   const [messages, setMessages] = useState<Array<{ sender: 'user' | 'ai'; text: string }>>([
     {
       sender: 'ai',
-      text: "Hello! I am Alex Vance's AI Representative. Ask me anything about Alex's background in marketing and technology, motivation for SMU's Master of IT in Business (MITB), or project architecture."
+      text: "Hello! I am Bui Quang Tuan's AI Representative. Ask me anything about Tuan's background in AI engineering and data pipelines, his experience at FPT Software and Thien AN, his technical projects, or his career goals."
     }
   ]);
   const [loading, setLoading] = useState(false);
@@ -35,10 +35,10 @@ export const AiAssistantDrawer: React.FC<AiAssistantDrawerProps> = ({
   if (!isOpen) return null;
 
   const sampleQuestions = [
-    "Why SMU MITB and what makes Alex a unique candidate?",
-    "How does Alex bridge marketing strategy with full-stack code?",
-    "What technical projects has Alex built in AI and data?",
-    "What are Alex's post-graduation career ambitions in Singapore?"
+    "What AI agent systems has Tuan built at FPT Software?",
+    "How does Tuan's Azure Big Data Pipeline (Medallion Architecture) work?",
+    "What makes Tuan's approach to RAG and Vector Databases unique?",
+    "What are Tuan's career goals and technical strengths as an AI Engineer?"
   ];
 
   const handleSendQuestion = async (qText?: string) => {
@@ -59,7 +59,7 @@ export const AiAssistantDrawer: React.FC<AiAssistantDrawerProps> = ({
       });
 
       const data = await res.json();
-      const aiText = data.answer || "I received your question! Alex Vance is an ideal candidate for SMU MITB, bridging marketing strategy, full-stack software development, and AI decision systems.";
+      const aiText = data.answer || "I received your question! Bui Quang Tuan is an AI Engineer at FPT Software, specializing in autonomous AI agents, RAG architectures, and enterprise-scale data pipelines on Azure and GCP.";
 
       setMessages(prev => [...prev, { sender: 'ai', text: aiText }]);
     } catch (err) {
@@ -68,7 +68,7 @@ export const AiAssistantDrawer: React.FC<AiAssistantDrawerProps> = ({
         ...prev,
         {
           sender: 'ai',
-          text: "Alex Vance combines marketing psychology, full-stack software development (TypeScript, React, Python), and enterprise data analytics, making Alex a strong candidate for SMU's Master of IT in Business (MITB)."
+          text: "Bui Quang Tuan is an AI Engineer specializing in autonomous agents, RAG systems with Vector Databases, end-to-end data pipelines processing 50M+ rows (Azure/GCP), and production AI-powered web applications."
         }
       ]);
     } finally {
@@ -100,7 +100,7 @@ export const AiAssistantDrawer: React.FC<AiAssistantDrawerProps> = ({
                 <span className="text-neutral-500">// Gemini Powered</span>
               </div>
               <h2 className="text-lg font-serif font-bold text-white">
-                Ask Alex's AI Twin
+                Ask Tuan's AI Twin
               </h2>
             </div>
           </div>
@@ -183,7 +183,7 @@ export const AiAssistantDrawer: React.FC<AiAssistantDrawerProps> = ({
           {loading && (
             <div className="flex items-center space-x-2 text-xs font-mono text-amber-400 p-2">
               <Loader2 className="w-4 h-4 animate-spin text-amber-500" />
-              <span>Analyzing Alex Vance's portfolio & SMU MITB credentials...</span>
+              <span>Analyzing Bui Quang Tuan's portfolio & AI engineering credentials...</span>
             </div>
           )}
         </div>
@@ -201,7 +201,7 @@ export const AiAssistantDrawer: React.FC<AiAssistantDrawerProps> = ({
               type="text"
               value={question}
               onChange={(e) => setQuestion(e.target.value)}
-              placeholder="Ask a question about Alex Vance or SMU MITB fit..."
+              placeholder="Ask about Tuan's AI projects, skills, or career goals..."
               className="flex-1 px-4 py-2.5 rounded-xl border border-neutral-800 bg-neutral-900 text-white text-xs font-mono focus:outline-none focus:ring-1 focus:ring-amber-500"
             />
 

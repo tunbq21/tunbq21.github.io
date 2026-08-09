@@ -90,15 +90,15 @@ export const Navigation: React.FC<NavigationProps> = ({
                 </span>
               </div>
               <div className="flex items-center space-x-1.5 text-[10px] font-mono text-neutral-500 dark:text-neutral-400">
-                <GraduationCap className="w-3 h-3 text-amber-500" />
-                <span>SMU MITB Candidate '26</span>
+                <Sparkles className="w-3 h-3 text-amber-500" />
+                <span>AI Engineer</span>
               </div>
             </button>
 
             {/* Live Status Pill */}
             <div className="hidden md:flex items-center space-x-2 px-2.5 py-1 rounded-full text-[11px] font-mono border border-emerald-500/30 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-              <span>Open to SMU MITB & Strategic Roles</span>
+              <span>Open to New Opportunities</span>
             </div>
           </div>
 
@@ -137,7 +137,7 @@ export const Navigation: React.FC<NavigationProps> = ({
                 onOpenAiAssistant();
               }}
               className="px-3 py-1.5 rounded-full text-xs font-mono font-medium flex items-center space-x-1.5 border border-amber-500/40 bg-amber-500/10 text-amber-700 dark:text-amber-300 hover:bg-amber-500/20 transition-all cursor-pointer shadow-xs"
-              title="Ask Alex's AI Representative questions about SMU MITB fit"
+              title="Ask Tuan's AI Representative about skills, projects or career goals"
             >
               <Sparkles className="w-3.5 h-3.5 text-amber-500 animate-pulse" />
               <span className="hidden sm:inline">Ask AI Rep</span>
@@ -152,7 +152,7 @@ export const Navigation: React.FC<NavigationProps> = ({
               className="hidden sm:flex px-3 py-1.5 rounded-full text-xs font-mono font-medium items-center space-x-1.5 border border-neutral-300 dark:border-neutral-700 bg-neutral-200/50 dark:bg-neutral-800/50 text-neutral-800 dark:text-neutral-200 hover:border-neutral-400 dark:hover:border-neutral-500 transition-all cursor-pointer"
             >
               <GraduationCap className="w-3.5 h-3.5 text-amber-500" />
-              <span>MITB Pitch</span>
+              <span>About Me</span>
             </button>
 
             {/* Sound Toggle */}

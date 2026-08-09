@@ -9,7 +9,7 @@ export interface Milestone {
 }
 
 export interface ChapterNarrative {
-  id: 'marketing-education' | 'coding-journey' | 'the-future';
+  id: 'marketing-education' | 'coding-journey' | 'the-future'; // Giữ nguyên ID để tương thích với component
   number: string;
   title: string;
   subtitle: string;
@@ -76,7 +76,7 @@ export interface PitchSlide {
 export interface ContactFormData {
   fullName: string;
   organization: string;
-  role: 'SMU Admissions / Faculty' | 'Tech Leader / Recruiter' | 'Collaborator' | 'General';
+  role: 'Recruiter / HR' | 'Tech Leader / Engineering Manager' | 'Collaborator / Developer' | 'General';
   email: string;
   message: string;
   interestedIn: string[];

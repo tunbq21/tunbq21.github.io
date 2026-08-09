@@ -45,16 +45,16 @@ export const MitbPitchDrawer: React.FC<MitbPitchDrawerProps> = ({
   const handleCopyStatement = () => {
     playTickSound(500);
     const statement = `
-Alex Vance — SMU Master of IT in Business (MITB) Application Summary
-Track: Analytics / AI & Financial Technology Candidate ('26 Cohort)
+Bui Quang Tuan — AI Engineer Career Summary
+Current Role: AI Engineer @ FPT Software
 
 Vision Statement:
-"Bridging brand strategy, consumer economics, and full-stack software architecture. Seeking SMU MITB to master enterprise AI, big data systems, and algorithmic decision frameworks to lead digital transformation across Asia-Pacific."
+"I build autonomous AI systems that transform raw data into intelligent, automated decisions — from pipeline architecture to production deployment. My mission is to create AI infrastructure that creates measurable economic value."
 
 Core Highlights:
-1. Marketing & Business Analytics: B.B.A background, $1.2M budget attribution models, consumer decision theory.
-2. Self-Taught Full-Stack Code: TypeScript, React 19, Express, Python data pipelines, 10+ production applications.
-3. SMU MITB Alignment: Applied AI capstones, financial technology systems, and collaborative industry leadership.
+1. AI Agents & RAG: Advanced prompt engineering, custom tool integrations, Vector Databases, RAG architectures processing 50M+ row datasets.
+2. Cloud Data Engineering: Azure (ADF, Databricks, Synapse), GCP (Dataproc, GCS), AWS (EC2, S3) — full Medallion Architecture pipelines.
+3. Production Experience: FPT Software (AI Engineer), Thien AN (AI Automation), SenDo E-commerce (FullStack Developer).
     `;
     navigator.clipboard.writeText(statement.trim());
     setCopiedBrief(true);
@@ -74,10 +74,10 @@ Core Highlights:
             </div>
             <div>
               <div className="text-xs font-mono text-amber-400 font-bold uppercase">
-                SMU MITB CANDIDACY PITCH DECK
+                CAREER PITCH DECK
               </div>
               <h2 className="text-xl font-serif font-bold text-white">
-                Master of IT in Business Application Statement
+                AI Engineer — Career Statement
               </h2>
             </div>
           </div>
@@ -149,7 +149,7 @@ Core Highlights:
           <div className="p-5 rounded-2xl bg-amber-500/10 border border-amber-500/30 space-y-2 relative">
             <Quote className="w-6 h-6 text-amber-500/30 absolute right-4 bottom-4" />
             <div className="text-xs font-mono text-amber-400 font-bold uppercase">
-              Core Application Premise
+              Career Pitch Highlight
             </div>
             <p className="font-serif italic text-white text-base">
               "{currentSlide.keyQuote}"
@@ -175,7 +175,7 @@ Core Highlights:
             className="px-4 py-2 rounded-xl border border-neutral-700 hover:border-neutral-500 text-neutral-200 flex items-center space-x-2 transition-colors cursor-pointer"
           >
             {copiedBrief ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4 text-amber-400" />}
-            <span>{copiedBrief ? "Copied MITB Brief!" : "Copy Narrative Statement"}</span>
+            <span>{copiedBrief ? "Copied Career Brief!" : "Copy Career Statement"}</span>
           </button>
 
           <div className="flex items-center space-x-3">

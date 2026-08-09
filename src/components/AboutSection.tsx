@@ -52,7 +52,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
             </h2>
           </div>
           <p className="max-w-md text-sm font-sans text-neutral-600 dark:text-neutral-400 font-normal leading-relaxed">
-            From consumer psychology to code architecture and enterprise AI. A narrative story behind my application to SMU MITB.
+            From FullStack development to AI Engineering and autonomous agent systems. A narrative story of my engineering journey.
           </p>
         </div>
 
@@ -204,15 +204,15 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
                 ))}
               </div>
 
-              {/* Chapter-Specific SMU Link Callout */}
+              {/* Chapter Three — Career Pitch Callout */}
               {activeChapter.id === 'the-future' && (
                 <div className="p-4 rounded-xl border border-amber-500/40 bg-amber-500/10 space-y-3">
                   <div className="flex items-center space-x-2 text-xs font-mono text-amber-700 dark:text-amber-300 font-bold">
-                    <GraduationCap className="w-4 h-4 text-amber-500" />
-                    <span>SMU MITB Application Focus</span>
+                    <Sparkles className="w-4 h-4 text-amber-500" />
+                    <span>Career Pitch Deck</span>
                   </div>
                   <p className="text-xs text-neutral-700 dark:text-neutral-300 font-sans">
-                    Explore my complete candidacy pitch deck prepared for the admissions committee.
+                    Explore my career pitch — why I chose AI Engineering, what I bring, and where I'm headed.
                   </p>
                   <button
                     onClick={() => {

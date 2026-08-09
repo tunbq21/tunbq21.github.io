@@ -41,7 +41,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
   const [sentimentThreshold, setSentimentThreshold] = useState(75);
   const [simulatedSpike, setSimulatedSpike] = useState(false);
 
-  // State for SMU MITB Synergy Matrix Simulator
+  // State cho AI Engineering Use Case Simulator (Demo 4)
   const [selectedCourse, setSelectedCourse] = useState<'ai' | 'analytics' | 'fintech'>('ai');
 
   // Calculated values for OptiTrend
@@ -324,10 +324,10 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
               </div>
             )}
 
-            {/* DEMO 4: SMU MITB Synergy Matrix */}
+            {/* DEMO 4: AI Engineering Use Case Simulator */}
             {project.interactiveDemoId === 'mitb-simulator' && (
               <div className="space-y-4 font-mono text-xs">
-                <div className="text-neutral-400">Select SMU MITB Curriculum Track:</div>
+                <div className="text-neutral-400">Select AI Engineering Use Case:</div>
                 <div className="grid grid-cols-3 gap-2">
                   <button
                     onClick={() => setSelectedCourse('ai')}
@@ -337,8 +337,8 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
                         : 'border-neutral-800 bg-neutral-900 text-neutral-400'
                     }`}
                   >
-                    <div>AI & Deep Learning</div>
-                    <div className="text-[10px] opacity-70">Enterprise Machine Learning</div>
+                    <div>AI Agents</div>
+                    <div className="text-[10px] opacity-70">Autonomous Workflow Automation</div>
                   </button>
                   <button
                     onClick={() => setSelectedCourse('analytics')}
@@ -348,8 +348,8 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
                         : 'border-neutral-800 bg-neutral-900 text-neutral-400'
                     }`}
                   >
-                    <div>Applied Analytics</div>
-                    <div className="text-[10px] opacity-70">Customer & Operations Data</div>
+                    <div>RAG Systems</div>
+                    <div className="text-[10px] opacity-70">Knowledge Base + Vector DB</div>
                   </button>
                   <button
                     onClick={() => setSelectedCourse('fintech')}
@@ -359,19 +359,19 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
                         : 'border-neutral-800 bg-neutral-900 text-neutral-400'
                     }`}
                   >
-                    <div>FinTech Strategy</div>
-                    <div className="text-[10px] opacity-70">Financial Technology Architecture</div>
+                    <div>Data Pipelines</div>
+                    <div className="text-[10px] opacity-70">ETL at Medallion Scale</div>
                   </button>
                 </div>
 
                 <div className="p-4 rounded-xl bg-neutral-900 border border-neutral-800 space-y-2 font-sans">
                   <div className="text-amber-400 font-mono font-bold text-xs uppercase">
-                    SMU MITB Synergy Scenario Result:
+                    AI Engineering Impact Scenario:
                   </div>
                   <p className="text-neutral-200 text-sm">
-                    {selectedCourse === 'ai' && "Deploying generative recommendation models directly into retail checkout flows, reducing friction while boosting average order value by +21%."}
-                    {selectedCourse === 'analytics' && "Automating multi-touch attribution pipelines across regional APAC campaigns to eliminate 30%+ ad spend waste."}
-                    {selectedCourse === 'fintech' && "Synthesizing real-time transaction sentiment signals with credit risk models for personalized micro-investment products."}
+                    {selectedCourse === 'ai' && "Autonomous AI agents automate social media management and invoice processing via OCR — eliminating 15+ hours of manual work per week across multiple business platforms."}
+                    {selectedCourse === 'analytics' && "RAG pipeline grounds AI responses in 50M+ rows of proprietary company data via Vector DB — eliminating hallucinations and enabling domain-specific query answering at enterprise scale."}
+                    {selectedCourse === 'fintech' && "Medallion Architecture pipeline on Azure (Bronze-Silver-Gold) ingests multi-source data, transforms via PySpark/Databricks, and surfaces clean analytics to Synapse for business intelligence."}
                   </p>
                 </div>
               </div>
@@ -400,7 +400,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
 
         {/* Modal Footer */}
         <div className="p-6 border-t border-neutral-800 bg-neutral-950 flex items-center justify-between text-xs font-mono">
-          <span className="text-neutral-500">Alex Vance — SMU MITB Candidate '26</span>
+          <span className="text-neutral-500">Bui Quang Tuan — AI Engineer Portfolio</span>
           <button
             onClick={onClose}
             className="px-5 py-2 rounded-full bg-neutral-800 hover:bg-neutral-700 text-white font-bold cursor-pointer transition-colors"

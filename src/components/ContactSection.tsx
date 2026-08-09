@@ -29,14 +29,15 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
   const [formData, setFormData] = useState<ContactFormData>({
     fullName: '',
     organization: '',
-    role: 'SMU Admissions / Faculty',
+    role: 'Recruiter / HR',
     email: '',
     message: '',
-    interestedIn: ['SMU MITB Discussion']
+    interestedIn: ['AI Engineering & Data Pipelines']
   });
 
   const [copiedEmail, setCopiedEmail] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleCopyEmail = () => {
     playTickSound(300);
@@ -45,11 +46,38 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
     setTimeout(() => setCopiedEmail(false), 2500);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.email || !formData.message) return;
-    playTickSound(600);
-    setSubmitted(true);
+    
+    setIsSubmitting(true);
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "039785d8-b25c-4992-8a48-4e1d07e1dbcf",
+          name: formData.fullName,
+          email: formData.email,
+          message: `Perspective/Role: ${formData.role}\n\nMessage:\n${formData.message}`,
+          subject: `New Portfolio Contact from ${formData.fullName}`,
+        }),
+      });
+      const result = await response.json();
+      if (result.success) {
+        playTickSound(600);
+        setSubmitted(true);
+      } else {
+        alert("There was an error sending your message. Please try again or email directly.");
+      }
+    } catch (error) {
+      alert("There was an error sending your message. Please try again or email directly.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleToggleInterest = (item: string) => {
@@ -79,7 +107,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
             The Next Chapter
           </h2>
           <p className="max-w-2xl text-base font-sans text-neutral-600 dark:text-neutral-400 leading-relaxed pt-1">
-            Whether you are reviewing my application for SMU's Master of IT in Business, looking for a cross-disciplinary tech leader, or discussing collaborative R&D—I welcome thoughtful conversations.
+            Whether you are a recruiter, tech leader, or potential collaborator — I welcome thoughtful conversations about AI engineering, data infrastructure, and impactful projects.
           </p>
         </div>
 
@@ -98,8 +126,8 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                   {PERSONAL_INFO.name}
                 </div>
                 <div className="text-xs font-mono text-neutral-500 dark:text-neutral-400 flex items-center space-x-1">
-                  <GraduationCap className="w-3.5 h-3.5 text-amber-500" />
-                  <span>{PERSONAL_INFO.targetProgram}</span>
+                  <Sparkles className="w-3.5 h-3.5 text-amber-500" />
+                  <span>{PERSONAL_INFO.title}</span>
                 </div>
               </div>
 
@@ -112,7 +140,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
 
                 <div className="p-3 rounded-xl border border-emerald-500/30 bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 flex items-center space-x-2">
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                  <span className="font-semibold">Ready for SMU MITB '26 Cohort & Strategic Projects</span>
+                  <span className="font-semibold">Open to AI Engineering & Senior Roles</span>
                 </div>
               </div>
 
@@ -141,7 +169,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                   className="w-full py-3 rounded-xl border border-amber-500/40 bg-amber-500/10 text-amber-700 dark:text-amber-300 font-mono font-bold text-xs hover:bg-amber-500/20 transition-colors flex items-center justify-center space-x-2 cursor-pointer"
                 >
                   <GraduationCap className="w-4 h-4 text-amber-500" />
-                  <span>Review SMU MITB Pitch Deck</span>
+                  <span>View Career Pitch Deck</span>
                 </button>
 
                 <button
@@ -202,9 +230,9 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                     </label>
                     <div className="grid grid-cols-2 gap-2 text-xs font-mono">
                       {[
-                        'SMU Admissions / Faculty',
-                        'Tech Leader / Recruiter',
-                        'Collaborator',
+                        'Recruiter / HR',
+                        'Tech Leader / Engineering Manager',
+                        'Collaborator / Developer',
                         'General Inquiry'
                       ].map((r) => (
                         <button
@@ -255,11 +283,11 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
 
                   {/* Message Textarea */}
                   <div className="space-y-1 font-mono text-xs">
-                    <label className="text-neutral-500">Your Message or Thoughts on Alex's Candidacy</label>
+                    <label className="text-neutral-500">Your Message or Thoughts</label>
                     <textarea
                       required
                       rows={4}
-                      placeholder="Write your note or question regarding SMU MITB, research, or projects..."
+                      placeholder="Write your note or question about AI engineering, data projects, or collaboration..."
                       value={formData.message}
                       onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
                       className="w-full px-3.5 py-2.5 rounded-xl border border-neutral-300 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 focus:outline-none focus:ring-1 focus:ring-amber-500 font-sans"
@@ -269,10 +297,15 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                   {/* Submit Button */}
                   <button
                     type="submit"
-                    className="w-full py-3.5 rounded-xl bg-neutral-900 text-neutral-100 dark:bg-neutral-100 dark:text-neutral-900 font-mono font-bold text-xs hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-colors flex items-center justify-center space-x-2 cursor-pointer shadow-md"
+                    disabled={isSubmitting}
+                    className={`w-full py-3.5 rounded-xl text-neutral-100 dark:text-neutral-900 font-mono font-bold text-xs transition-colors flex items-center justify-center space-x-2 shadow-md ${
+                      isSubmitting
+                        ? "bg-neutral-600 dark:bg-neutral-400 cursor-not-allowed"
+                        : "bg-neutral-900 dark:bg-neutral-100 hover:bg-neutral-800 dark:hover:bg-neutral-200 cursor-pointer"
+                    }`}
                   >
-                    <span>Transmit Narrative Note</span>
-                    <Send className="w-4 h-4 text-amber-400 dark:text-amber-600" />
+                    <span>{isSubmitting ? "Transmitting..." : "Transmit Narrative Note"}</span>
+                    {!isSubmitting && <Send className="w-4 h-4 text-amber-400 dark:text-amber-600" />}
                   </button>
 
                 </form>

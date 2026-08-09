@@ -1,306 +1,338 @@
 import { ChapterNarrative, ProjectItem, VideoPreset, PitchSlide } from '../types';
 
+// =====================================================
+// THÔNG TIN CÁ NHÂN
+// =====================================================
 export const PERSONAL_INFO = {
-  name: "Alex Vance",
-  targetProgram: "SMU Master of IT in Business (MITB)",
-  degreeTrack: "Analytics & Financial Technology Track Candidate",
-  tagline: "Bridging Brand Psychology, Business Strategy & Algorithmic Architecture",
-  location: "Singapore & Regional Tech Hubs",
-  email: "alex.vance.mitb@smu-candidate.dev",
-  github: "https://github.com",
-  linkedin: "https://linkedin.com",
-  applicationYear: "2026 Cohort",
-  bioHeadline: "I build software that turns complex business strategy into responsive, human-centered intelligent systems."
+  name: "Bui Quang Tuan",
+  title: "AI Engineer",
+  tagline: "Building Autonomous AI Agents & End-to-End Data Pipelines",
+  location: "Ho Chi Minh City, Viet Nam",
+  phone: "(+84) 862-319-477",
+  email: "tbuiquang2002@gmail.com",
+  github: "https://github.com/tunbq21",
+  linkedin: "https://www.linkedin.com/in/tunbq21",
+  applicationYear: "2026",
+  bioHeadline: "I engineer AI systems that turn raw data into intelligent, automated decisions — from pipeline to product.",
+  summary: "Dedicated AI Engineering Fresher with a 'learn-by-doing' mindset and a strong foundation in data infrastructure. I specialize in building end-to-end pipelines on Azure and GCP, alongside developing automated workflow applications and AI Agents to support smart integrations.",
 };
 
+// =====================================================
+// VIDEO PRESETS CHO HERO SECTION
+// =====================================================
 export const HERO_VIDEO_PRESETS: VideoPreset[] = [
   {
-    id: "architectural-data",
-    name: "Architectural Grid",
-    category: "Data & Systems",
+    id: "robot-fighter",
+    name: "Robot Fighter",
+    category: "Custom",
+    videoUrl: "/Robot_Fighter_Motion_10s.webm",
+    posterUrl: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1200&auto=format&fit=crop",
+    description: "Custom motion clip — high-energy cinematic energy for the AI engineering portfolio."
+  },
+  {
+    id: "data-pipeline",
+    name: "Data in Motion",
+    category: "AI & Data Engineering",
     videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-digital-animation-of-screens-and-data-41539-large.mp4",
-    posterUrl: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1200&auto=format&fit=crop",
-    description: "Visualizing high-frequency enterprise data flows and geometric architectural grids."
+    posterUrl: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1200&auto=format&fit=crop",
+    description: "Visualizing high-velocity data flows powering modern AI systems."
   },
   {
     id: "terminal-code",
     name: "Kinetic Code Stream",
-    category: "Technology",
+    category: "Engineering",
     videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-code-and-data-on-a-computer-screen-41552-large.mp4",
     posterUrl: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop",
-    description: "The mechanics of raw code transforming into structured business logic."
+    description: "Raw Python and SQL logic transforming into structured data insights."
   },
   {
-    id: "fluid-canvas",
-    name: "Fluid Brand Dynamics",
-    category: "Design & Perception",
+    id: "ai-network",
+    name: "Neural Lattice",
+    category: "Artificial Intelligence",
     videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-abstract-laser-lights-background-41584-large.mp4",
-    posterUrl: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop",
-    description: "Exploration of visual tension, perception, and human experience in digital interfaces."
+    posterUrl: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?q=80&w=1200&auto=format&fit=crop",
+    description: "The invisible architecture of AI agents making real-time autonomous decisions."
   }
 ];
 
+// =====================================================
+// 3 CHƯƠNG HÀNH TRÌNH (ABOUT SECTION)
+// =====================================================
 export const NARRATIVE_CHAPTERS: ChapterNarrative[] = [
   {
     id: "marketing-education",
     number: "01",
-    title: "Marketing & Education",
-    subtitle: "The Foundation: Brand Psychology & Business Strategy",
-    period: "2021 — 2023",
+    title: "Education & FullStack Foundation",
+    subtitle: "The Starting Point: Software Engineering Degree & First Professional Steps",
+    period: "2021 — 2025",
     badge: "Chapter One",
-    summary: "Where my journey began: understanding human motives, market signals, and consumer decision frameworks.",
+    summary: "Where it all began: a Software Engineering degree at FPT University, building the foundation in code — and the first real-world encounter with production-grade systems at an E-commerce Platform.",
     narrativeParagraphs: [
-      "My foundational years were rooted in business administration and marketing analytics. I spent my early career analyzing consumer journey maps, running A/B experiments, and crafting brand positioning for competitive markets.",
-      "While traditional marketing taught me *why* consumers make choices, I quickly encountered a recurring ceiling: static campaign strategies could never adapt to real-time market turbulence. I realized that modern brand loyalty is governed by latency, algorithmic recommendation engines, and dynamic user interfaces.",
-      "To truly drive business growth, I needed to go beyond managing campaigns—I had to understand and build the computational pipelines that fuel them."
+      "My journey started at FPT University, Ho Chi Minh City, where I pursued a Bachelor of Software Engineering (GPA 3.21/4.0). Rather than treating university as a passive experience, I used it as a launchpad — constantly building side projects, exploring backend architecture, and diving deep into database systems from day one.",
+      "Towards graduation, I joined an E-commerce Platform as a FullStack Developer (Dec 2024 – May 2025). There, I maintained and extended the platform, developed backend microservices in Node.js, and collaborated with DevOps to containerize applications with Docker and deploy on cloud infrastructure.",
+      "These early experiences gave me critical instincts: how production systems fail, how databases scale, and why clean architecture isn't optional — it's a survival skill in real engineering teams."
     ],
     keyMilestones: [
       {
         year: "2021",
-        title: "Bachelor of Business Administration",
-        description: "Specialized in Marketing & Quantitative Consumer Insights. Graduated Top 5% with research in behavioral decision theory.",
-        tag: "Academics",
-        metrics: "GPA 3.88 / 4.00"
+        title: "FPT University — Software Engineering",
+        description: "Began Bachelor of Software Engineering. Specialized in backend systems, database design, and software architecture principles.",
+        tag: "Education",
+        metrics: "GPA 3.21 / 4.0"
       },
       {
-        year: "2022",
-        title: "Growth & Brand Analyst @ Nexus Digital",
-        description: "Led multi-channel data attribution models. Reallocated $1.2M marketing budget using linear regression models.",
-        tag: "Industry Experience",
-        metrics: "+34% Customer Acquisition Efficiency"
+        year: "2024",
+        title: "Startup Competition — Top 2",
+        description: "Pitched an automated 3D solution for the fashion design industry. Recognized for outstanding entrepreneurial innovation at the national level.",
+        tag: "Achievement"
       },
       {
-        year: "2023",
-        title: "The Epiphany",
-        description: "Recognized that manual spreadsheet analytics were obsolete. Decided to learn software engineering to build automated decision systems.",
-        tag: "Pivotal Shift"
+        year: "Dec 2024",
+        title: "FullStack Developer @ E-commerce Platform",
+        description: "Maintained the platform features, developed Node.js microservices, containerized apps with Docker, deployed on AWS EC2.",
+        tag: "Professional",
+        metrics: "PHP (Laravel), Node.js, MySQL, AWS"
       }
     ],
     quote: {
-      text: "Marketing gave me empathy for the user; business gave me respect for ROI; technology gave me the leverage to scale both.",
-      context: "Personal Progression Note, 2023"
+      text: "A degree teaches you to think; production systems teach you to survive. The gap between them is where real engineering begins.",
+      context: "Personal Engineering Journal, 2025"
     },
-    skillsAcquired: ["Consumer Behavior Theory", "Attribution Modeling", "Financial ROI Analysis", "Market Segmentation", "A/B Testing Methodology"],
+    skillsAcquired: ["PHP (Laravel)", "Node.js", "MySQL", "JavaScript", "AWS EC2", "Docker", "Database Design", "Software Architecture"],
     visualEmphasis: "Warm Ochre & Deep Charcoal"
   },
   {
     id: "coding-journey",
     number: "02",
-    title: "My Coding Journey",
-    subtitle: "The Transition: Crossing into Full-Stack Systems & Algorithmic Code",
-    period: "2023 — 2025",
+    title: "AI Engineering Journey",
+    subtitle: "The Transition: From FullStack to Autonomous Agents & Big Data Pipelines",
+    period: "Sep 2025 — Present",
     badge: "Chapter Two",
-    summary: "Breaking out of non-technical boundaries by mastering full-stack web development, software engineering, and data pipelines.",
+    summary: "The pivot into AI Engineering — building autonomous agents, architecting cloud-scale data pipelines, and integrating AI into real-world business workflows across two companies.",
     narrativeParagraphs: [
-      "I began teaching myself programming by building simple scripts to clean marketing logs. Within months, basic automation evolved into a full-blown obsession with software engineering, object-oriented design, and reactive frontends.",
-      "Instead of taking standard tutorial shortcuts, I immersed myself in core computer science principles: data structures, asynchronous event loops, API design, state machine management, and mathematical visualization.",
-      "Over two years, I built 10+ end-to-end applications: from algorithmic ad-spend reallocators to generative brand UI systems. Coding shifted from being a utility to becoming my primary canvas for creative and business problem-solving."
+      "In September 2025, I made a deliberate pivot into AI Engineering at a Technology Startup. There, I designed and built scalable backend architectures for outsourced projects, engineered autonomous AI agents to automate social media management across Facebook and Instagram, and orchestrated complex workflows with n8n. I also containerized everything with Docker for seamless deployment across environments.",
+      "In February 2026, I joined a Tech Corporation as an AI Engineer — a leap into enterprise-scale AI. Here, I engineer autonomous AI agents with advanced prompt engineering, implement RAG (Retrieval-Augmented Generation) architectures with Vector Databases, and develop end-to-end data pipelines processing over 50 million rows. I actively monitor and optimize AI operational costs by controlling token consumption across multiple models.",
+      "Beyond agents, I've built full AI-powered web applications with RESTful APIs, integrated OCR for automated invoice processing, and collaborated directly with clients to deliver tailored AI and data solutions. Every project deepened my conviction: the future belongs to engineers who can bridge raw data and real business impact."
     ],
     keyMilestones: [
       {
-        year: "Late 2023",
-        title: "First Production Full-Stack App",
-        description: "Built a real-time campaign dashboard using React, Node.js, and WebSockets to process live social media sentiment stream.",
-        tag: "Milestone Code"
+        year: "Sep 2025",
+        title: "AI Engineer @ Technology Startup",
+        description: "Engineered AI agents for social media automation (Facebook & Instagram), built complex n8n workflows, containerized apps with Docker.",
+        tag: "Industry AI",
+        metrics: "Python, n8n, Meta Graph API, Docker"
       },
       {
-        year: "2024",
-        title: "Lead Frontend & Analytics Systems Architect",
-        description: "Designed bespoke internal tools for growth teams, combining custom canvas charts, state machines, and microservice APIs.",
-        tag: "Professional Engineering",
-        metrics: "Reduced Reporting Time from 4 hrs to 3 mins"
+        year: "Dec 2025",
+        title: "Big Data Engineering Bootcamp Certification",
+        description: "Certified in Big Data Engineering covering GCP (Dataproc, GCS) and Azure Cloud (ADF, Databricks, Synapse) from Udemy — Mayank Aggarwal & Krish Naik.",
+        tag: "Certification"
       },
       {
-        year: "2025",
-        title: "Generative UI & Algorithmic Systems",
-        description: "Pioneered adaptive component systems that dynamically alter UI density and color palette based on user engagement metrics.",
-        tag: "R&D & Innovation"
+        year: "Feb 2026",
+        title: "AI Engineer @ Enterprise Tech Corporation",
+        description: "Building enterprise AI agents, RAG systems with Vector DBs, ETL pipelines (50M+ rows), AI web apps with RESTful APIs, and OCR automation for invoice processing.",
+        tag: "Current Role",
+        metrics: "Python, PySpark, RAG, Vector DB, Azure, GCP"
       }
     ],
     quote: {
-      text: "Code isn't just syntax—it is executable business logic. Writing clean code feels like writing a bulletproof strategy deck that executes itself.",
-      context: "Engineering Journal Entry, 2024"
+      text: "Code isn't just syntax — it is executable intelligence. Writing a clean AI pipeline feels like building a decision engine that works even when you sleep.",
+      context: "Engineering Journal Entry, 2026"
     },
-    skillsAcquired: ["TypeScript / JavaScript", "React 19 & Next.js", "Node.js & Express Architecture", "Python & Pandas Data Science", "Tailwind CSS & Motion", "REST & WebSocket APIs"],
+    skillsAcquired: ["Python", "AI Agents", "RAG", "Prompt Engineering", "Vector Databases", "n8n", "PySpark", "Azure Data Factory", "Azure Databricks", "GCP", "OCR", "RESTful APIs"],
     visualEmphasis: "Electric Cyan & Slate Monochrome"
   },
   {
     id: "the-future",
     number: "03",
-    title: "The Future & SMU MITB",
-    subtitle: "The Synthesis: Enterprise AI, Analytics & Strategic Tech Leadership",
+    title: "Vision & Future Goals",
+    subtitle: "The Synthesis: Leading AI Systems That Create Real Business Value",
     period: "2026 & Beyond",
     badge: "Chapter Three",
-    summary: "My vision for SMU's Master of IT in Business and my ambition to lead enterprise AI transformation in Singapore and Asia-Pacific.",
+    summary: "A clear north star — becoming an engineer who builds AI systems at the intersection of scale, intelligence, and measurable impact, driving digital transformation across industries.",
     narrativeParagraphs: [
-      "The next decade in business will belong to leaders who are deeply bilingual: capable of sitting in boardrooms discussing EBITDA and P&L, while sitting with engineering leads discussing model latency, vector embeddings, and database sharding.",
-      "SMU's Master of IT in Business (MITB) represents the exact convergence I seek. The program's rigorous curriculum in Enterprise AI, Data Analytics, and Financial Technology will sharpen my technical capability while expanding my strategic perspective.",
-      "At SMU, I aim to collaborate with world-class faculty, engage in applied industry projects, and contribute my unique cross-disciplinary perspective—bridging marketing psychology, aesthetic precision, and robust software architecture."
+      "My ambition is to be an AI Engineer who doesn't just ship models — but ships systems that genuinely change how organizations operate. Whether that means a pipeline that saves 300 hours of manual analysis annually, or an AI agent that replaces an entire workflow with zero human intervention, I measure success in business outcomes, not lines of code.",
+      "In the short term, I aim to deepen my expertise in enterprise-grade AI deployment: multi-agent orchestration, advanced RAG systems, production LLM optimization, and large-scale data infrastructure. I want to lead projects that demand both deep technical precision and strategic thinking.",
+      "Long-term, I see myself at the intersection of AI product leadership and engineering architecture — building intelligent platforms that define how companies in Southeast Asia make decisions, automate operations, and compete in an AI-first economy."
     ],
     keyMilestones: [
       {
         year: "2026 Target",
-        title: "SMU MITB Matriculation",
-        description: "Focusing on Analytics & AI/Financial Technology tracks. Aiming for Capstone Applied Project in AI-Driven Consumer Finance.",
-        tag: "Academic Goal",
-        metrics: "SMU Master of IT in Business"
+        title: "Senior AI Engineer / AI Systems Lead",
+        description: "Lead the architecture and deployment of multi-agent AI systems and production-scale data platforms for enterprise clients.",
+        tag: "Career Goal",
+        metrics: "AI Systems Architecture"
       },
       {
         year: "2027+",
-        title: "Strategic Tech Product / Analytics Leader",
-        description: "Leading enterprise digital transformation, AI integration, or fintech product strategy across Asia-Pacific.",
-        tag: "Career Vision"
+        title: "AI Product & Platform Leadership",
+        description: "Drive AI-first transformation — building intelligent platforms that redefine operations in FinTech, E-commerce, and Enterprise SaaS across Southeast Asia.",
+        tag: "Long-term Vision"
       }
     ],
     quote: {
-      text: "I do not wish to be just a business leader who uses technology, nor a developer isolated from business outcome. I aim to be the bridge.",
-      context: "SMU MITB Personal Statement Highlight"
+      text: "I do not want to be just an engineer who uses AI tools. I want to be the one who builds the tools that others rely on.",
+      context: "Personal Career Manifesto, 2026"
     },
-    skillsAcquired: ["Enterprise AI Deployment", "Financial Technology Systems", "Big Data Architecture", "Executive Stakeholder Management", "Ethical AI Governance"],
+    skillsAcquired: ["Multi-Agent Orchestration", "LLM Optimization", "Production AI Deployment", "Cloud Architecture", "AI Product Strategy", "Executive Stakeholder Communication"],
     visualEmphasis: "Monochrome Obsidian with Gold Accents"
   }
 ];
 
+// =====================================================
+// PROJECTS (2 thật + 2 từ kinh nghiệm làm việc)
+// =====================================================
 export const PROJECTS: ProjectItem[] = [
   {
-    id: "optitrend-engine",
-    title: "OptiTrend",
-    subtitle: "Algorithmic Brand Spend & Real-Time ROAS Reallocator",
-    category: "Marketing Analytics",
-    year: "2025",
+    id: "ai-agent-job-search",
+    title: "AI Agent Job Search Platform",
+    subtitle: "Intelligent Resume Parsing & Job Matching with Google Gemini",
+    category: "Human-AI Interfaces",
+    year: "2026",
     featured: true,
     gridSpan: "col-span-12 lg:col-span-8",
     imageAspect: "aspect-[16/9]",
-    imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?q=80&w=1200&auto=format&fit=crop",
     mediaType: "image",
-    tags: ["TypeScript", "Data Modeling", "Algorithmic Finance", "Recharts", "Express API"],
-    narrativeSummary: "A multi-channel marketing budget optimization engine that automatically shifts spend across ad networks based on live marginal ROAS curves rather than static quarterly budgets.",
-    theChallenge: "Marketing teams often lose 20-30% of ad budget due to delayed performance reporting and static channel allocations that fail to adapt to intraday conversions.",
-    theArchitecturalSolution: "Built a custom mathematical optimization model in TypeScript that recalculates marginal returns every 15 minutes and executes automated budget balancing via API webhooks.",
+    tags: ["Python", "FastAPI", "Google Gemini API", "SQLite", "PyPDF2", "RESTful APIs"],
+    narrativeSummary: "An intelligent job matching platform that uses the Google Gemini API to automatically parse unstructured resume data (PDF, DOCX) and match candidates to relevant job listings based on dynamic AI analysis.",
+    theChallenge: "Job seekers waste hours manually scanning job boards for roles that match their profile — and often apply to mismatched positions. There was no intelligent layer connecting their actual skills to relevant opportunities in real-time.",
+    theArchitecturalSolution: "Built a smart discovery pipeline with FastAPI and SQLite that parses resumes via PyPDF2, extracts core skills and experience using Gemini AI, then curates and filters job listings dynamically. Integrated a Kanban-style application tracking system for full pipeline management.",
     businessImpact: [
-      { label: "Ad Spend Efficiency", value: "+28.4%" },
-      { label: "Intraday Waste Cut", value: "320 hrs/yr" },
-      { label: "Campaign Revenue", value: "$1.4M Managed" }
+      { label: "Resume Parsing", value: "PDF + DOCX" },
+      { label: "AI Model", value: "Google Gemini" },
+      { label: "Tracking System", value: "Kanban Workflow" }
     ],
-    techStack: ["TypeScript", "Node.js", "Tailwind CSS", "Recharts", "Framer Motion"],
-    interactiveDemoId: "ad-optimizer",
-    externalUrl: "https://github.com"
+    techStack: ["Python", "FastAPI", "Google Gemini API", "PyPDF2", "SQLite", "RESTful APIs"],
+    interactiveDemoId: "mitb-simulator",
+    externalUrl: "https://github.com/tunbq21/AI-Agent-Job-Search"
   },
   {
-    id: "morph-ui",
-    title: "MorphUI Engine",
-    subtitle: "Generative UI System for Dynamic Brand Personas",
-    category: "Generative Systems",
-    year: "2025",
+    id: "azure-big-data-pipeline",
+    title: "Azure Big Data Pipeline",
+    subtitle: "Medallion Architecture (Bronze-Silver-Gold) on Azure Cloud",
+    category: "FinTech & Data",
+    year: "2026",
     featured: true,
     gridSpan: "col-span-12 lg:col-span-4",
     imageAspect: "aspect-[3/4]",
-    imageUrl: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1667984390527-850f63192709?q=80&w=1200&auto=format&fit=crop",
     mediaType: "image",
-    tags: ["React 19", "Design Tokens", "Tailwind CSS v4", "Generative Rules"],
-    narrativeSummary: "An adaptive frontend architecture that mutates typography scale, spatial rhythm, and accent hues in real time based on user intent signals and brand persona profiles.",
-    theChallenge: "Traditional static design systems force every user segment into an identical visual template regardless of whether they are a high-speed trader or a casual consumer.",
-    theArchitecturalSolution: "Created a tokenized CSS-in-JS & CSS Variables engine with smooth spring physics transitions that re-skins components on the fly without page reloads.",
+    tags: ["Azure Data Factory", "Databricks", "Synapse Analytics", "PySpark", "Delta Lake", "SQL"],
+    narrativeSummary: "A scalable ETL pipeline on Azure implementing the Medallion Architecture (Bronze-Silver-Gold) to process multi-source data from GitHub APIs and SQL Databases for enterprise-level business intelligence.",
+    theChallenge: "Multi-source raw data from GitHub and SQL databases arrived in inconsistent formats, making it impossible for business teams to run reliable analytics without hours of manual transformation and validation.",
+    theArchitecturalSolution: "Architected a full Medallion pipeline: Azure Data Factory for orchestrated ingestion into ADLS Gen2, Azure Databricks (PySpark) for cleaning and transformation stored in Delta Lake format, and Azure Synapse Analytics for Gold-layer business intelligence aggregation.",
     businessImpact: [
-      { label: "Session Time", value: "+42%" },
-      { label: "Conversion Lift", value: "+18.9%" }
+      { label: "Architecture", value: "Medallion (B/S/G)" },
+      { label: "Processing Engine", value: "PySpark + Databricks" },
+      { label: "Storage Format", value: "Delta Lake" }
     ],
-    techStack: ["React 19", "Tailwind CSS v4", "Framer Motion", "TypeScript"],
-    interactiveDemoId: "generative-ui"
+    techStack: ["Azure Data Factory", "Azure Databricks", "Synapse Analytics", "ADLS Gen2", "PySpark", "Delta Lake", "SQL"],
+    interactiveDemoId: "sentiment-analytics",
+    externalUrl: "https://github.com/tunbq21/BigData_Project"
   },
   {
-    id: "sentience-radar",
-    title: "Sentience Radar",
-    subtitle: "Consumer Sentiment Micro-Signals & Anomalies",
-    category: "FinTech & Data",
-    year: "2024",
+    id: "social-media-ai-automation",
+    title: "Social Media AI Automation",
+    subtitle: "Autonomous Agent System for Multi-Platform Content Management",
+    category: "Generative Systems",
+    year: "2025",
     featured: false,
     gridSpan: "col-span-12 lg:col-span-5",
     imageAspect: "aspect-[4/3]",
-    imageUrl: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1200&auto=format&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1200&auto=format&fit=crop",
     mediaType: "image",
-    tags: ["Python Data Stream", "WebSockets", "Natural Language Processing", "D3.js"],
-    narrativeSummary: "A real-time market sentiment monitor aggregating thousands of social feeds, customer support transcripts, and forum discussions to detect subtle early product perception shifts.",
-    theChallenge: "Negative brand sentiment often spreads for days before registering in traditional quarterly Net Promoter Score (NPS) surveys.",
-    theArchitecturalSolution: "Designed a streaming NLP classification pipeline that flags sentiment velocity spikes and plots early warning vectors on a radar dashboard.",
+    tags: ["Python", "n8n", "Meta Graph API", "Docker", "AI Agents"],
+    narrativeSummary: "An autonomous AI agent system built at Technology Startup that automates social media management across Facebook and Instagram, orchestrated with n8n for email and workflow automation.",
+    theChallenge: "The client's team spent 15+ hours per week manually scheduling, posting, and monitoring content across multiple social media platforms — a task with zero strategic value that was ripe for full automation.",
+    theArchitecturalSolution: "Engineered autonomous AI agents integrated with Meta Graph API for Facebook and Instagram management. Orchestrated complex multi-step workflows in n8n (including email automation and AI integration). Containerized all services with Docker for consistent cross-environment deployment.",
     businessImpact: [
-      { label: "Early Bug Discovery", value: "3.5 Days Faster" },
-      { label: "Crisis Mitigation", value: "94% Accuracy" }
+      { label: "Platforms Automated", value: "FB + Instagram" },
+      { label: "Workflow Engine", value: "n8n" },
+      { label: "Deployment", value: "Dockerized" }
     ],
-    techStack: ["React", "D3.js", "Node.js WebSockets", "NLP Microservice"],
-    interactiveDemoId: "sentiment-analytics"
+    techStack: ["Python", "n8n", "Meta Graph API", "Docker", "Node.js", "AI Agents"],
+    interactiveDemoId: "generative-ui"
   },
   {
-    id: "smu-mitb-matrix",
-    title: "SMU MITB Synergy Matrix",
-    subtitle: "Enterprise AI & Business Impact Simulator",
-    category: "Human-AI Interfaces",
+    id: "enterprise-rag-pipeline",
+    title: "Enterprise RAG System",
+    subtitle: "Domain-Specific AI Knowledge Base with Vector Database",
+    category: "Marketing Analytics",
     year: "2026",
     featured: true,
     gridSpan: "col-span-12 lg:col-span-7",
     imageAspect: "aspect-[16/9]",
-    imageUrl: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1200&auto=format&fit=crop",
     mediaType: "image",
-    tags: ["Interactive Simulator", "SMU Coursework Mapping", "Gemini AI", "Executive Dashboard"],
-    narrativeSummary: "An interactive portfolio tool mapping SMU MITB core learning modules (AI, Applied Analytics, FinTech, Governance) to real-world business ROI outcomes.",
-    theChallenge: "Academic credentials are often presented as passive text bullet points rather than dynamic demonstrations of applied value.",
-    theArchitecturalSolution: "Built a interactive matrix component allowing admissions committees and tech leaders to simulate business problem scenarios and see how MITB skills solve them.",
+    tags: ["Python", "RAG", "Vector Databases", "Prompt Engineering", "PySpark", "APIs"],
+    narrativeSummary: "An enterprise-grade Retrieval-Augmented Generation system built at the Enterprise Tech Corporation, enabling AI agents to accurately answer domain-specific internal queries by grounding responses in processed company knowledge.",
+    theChallenge: "Internal AI agents produced unreliable, hallucinated answers on domain-specific queries because they lacked access to proprietary company knowledge. Standard LLMs alone couldn't provide trustworthy responses at enterprise scale.",
+    theArchitecturalSolution: "Implemented a full RAG pipeline: developed end-to-end data pipelines to crawl, clean, and process 50M+ row datasets, ingested processed data into Vector Databases, and engineered AI agents with custom tool integrations and advanced prompt engineering to retrieve accurate, grounded answers in real-time.",
     businessImpact: [
-      { label: "Program Alignment", value: "100% Fit" },
-      { label: "Interactive Modules", value: "4 Track Scenarios" }
+      { label: "Data Processed", value: "50M+ Rows" },
+      { label: "Architecture", value: "RAG + Vector DB" },
+      { label: "Query Accuracy", value: "Domain-Specific" }
     ],
-    techStack: ["React 19", "Gemini 2.5 API", "Tailwind CSS", "Motion"],
-    interactiveDemoId: "mitb-simulator"
+    techStack: ["Python", "RAG", "Vector Databases", "PySpark", "Prompt Engineering", "RESTful APIs"],
+    interactiveDemoId: "ad-optimizer"
   }
 ];
 
+// =====================================================
+// CAREER PITCH SLIDES
+// =====================================================
 export const SMU_MITB_SLIDES: PitchSlide[] = [
   {
     id: 1,
-    chapterTag: "Why SMU MITB?",
-    title: "Strategic Fit & Vision",
-    subtitle: "Why the Master of IT in Business is my definitive next step",
+    chapterTag: "Why AI Engineering?",
+    title: "The Path I Chose",
+    subtitle: "Why I moved from FullStack into Autonomous AI Systems & Data Engineering",
     content: [
-      "SMU's MITB stands at the premier intersection of business acumen, analytical rigor, and artificial intelligence.",
-      "Having mastered marketing strategy and full-stack web engineering, MITB will equip me with enterprise-grade data management, deep learning deployment, and financial technology architecture.",
-      "My goal is to graduate as an agile technology leader who drives high-impact digital initiatives across Singapore and global markets."
+      "Traditional software development solves known problems. AI Engineering solves problems we didn't know we had — and creates capabilities that didn't exist before.",
+      "After experiencing production systems at SenDo and seeing the limits of manual data workflows, I realized the next frontier wasn't just writing better code — it was building systems that learn, reason, and act autonomously.",
+      "I chose AI Engineering because it sits at the intersection of everything I care about: elegant architecture, real-world impact, and systems that continue to create value long after the last commit."
     ],
-    keyQuote: "SMU MITB is not just a degree; it is the ultimate accelerator for cross-disciplinary leaders in Asia's tech ecosystem.",
+    keyQuote: "I don't just want to use AI tools — I want to build the systems that others depend on to make decisions.",
     stats: [
-      { label: "Target Track", value: "Analytics / AI & FinTech" },
-      { label: "Core Competency", value: "Marketing + Software + Business" },
-      { label: "Location Focus", value: "Singapore & Global Markets" }
+      { label: "Current Role", value: "AI Engineer @ Enterprise Tech Corporation" },
+      { label: "Core Focus", value: "AI Agents + Data Pipelines" },
+      { label: "Location", value: "Ho Chi Minh City, VN" }
     ]
   },
   {
     id: 2,
-    chapterTag: "What I Bring to SMU",
-    title: "Unique Value Proposition",
-    subtitle: "A candidate who builds, designs, and understands market economics",
+    chapterTag: "What I Bring",
+    title: "Technical Value Proposition",
+    subtitle: "A full-stack AI engineer with cloud, agents, and data engineering depth",
     content: [
-      "Real-World Business Experience: Proven track record in budget allocation, brand positioning, and ROI tracking.",
-      "Hands-On Full-Stack Code: Proficiency in TypeScript, React, Node.js, Python, and modern web architectures.",
-      "Human-Centered Design Focus: Deep commitment to user experience, visual clarity, and accessible AI systems."
+      "End-to-End AI Pipelines: From raw data ingestion (50M+ rows) on Azure and GCP to clean, structured, AI-ready datasets in Delta Lake — I build the whole stack.",
+      "Autonomous AI Agents: Advanced prompt engineering, custom tool integrations, RAG architectures, and Vector Databases — not just calling APIs, but engineering real autonomous systems.",
+      "Production-Ready Deployment: Docker containerization, RESTful API design, cloud-native architectures (Azure ADF, Databricks, Synapse; GCP Dataproc) — systems that run reliably at enterprise scale."
     ],
-    keyQuote: "I bring a builder's mindset to the classroom—ready to collaborate, prototype, and push project boundaries.",
+    keyQuote: "I bring a builder's mindset: if the tool doesn't exist, I engineer it. If the pipeline breaks, I fix the architecture.",
     stats: [
-      { label: "Full-Stack Apps Built", value: "10+ Systems" },
-      { label: "Years in Strategy & Dev", value: "4+ Years Combined" }
+      { label: "Data Processed", value: "50M+ Rows" },
+      { label: "Cloud Platforms", value: "Azure + GCP + AWS" },
+      { label: "Apps & Pipelines", value: "10+ Built" }
     ]
   },
   {
     id: 3,
-    chapterTag: "Post-Graduation Roadmap",
-    title: "Impact & Ambition",
-    subtitle: "Leading the next wave of intelligent business products",
+    chapterTag: "Future Vision",
+    title: "Where I'm Headed",
+    subtitle: "Building AI systems that define how organizations operate in an AI-first world",
     content: [
-      "Short-Term (0-2 Years post-MITB): Lead Product Manager or Lead Analytics Specialist for enterprise AI tools in Singapore.",
-      "Long-Term (3-5 Years): Chief Product / Analytics Officer bridging corporate strategy, software teams, and customer experience."
+      "Short-Term (0-2 Years): Become a Senior AI Engineer specializing in multi-agent orchestration, production LLM optimization, and enterprise-scale data infrastructure.",
+      "Long-Term (3-5 Years): Lead AI product and platform architecture — building intelligent systems that power decision-making for FinTech, E-commerce, and Enterprise SaaS companies across Southeast Asia.",
+      "My defining measure of success: not model accuracy metrics, but real business outcomes — hours saved, revenue generated, and decisions made faster and smarter through intelligent automation."
     ],
-    keyQuote: "Creating technology that doesn't just run smoothly, but creates measurable economic value and delightful user moments.",
+    keyQuote: "Creating AI that doesn't just run smoothly — but creates measurable economic value and transforms how organizations compete.",
     stats: [
-      { label: "Target Role", value: "AI Product / Tech Strategy Leader" },
-      { label: "Domain", value: "FinTech, Retail AI, Enterprise SaaS" }
+      { label: "Target Role", value: "Senior AI Engineer / AI Lead" },
+      { label: "Domain Focus", value: "FinTech, E-commerce, SaaS" },
+      { label: "Specialization", value: "Multi-Agent AI Systems" }
     ]
   }
 ];

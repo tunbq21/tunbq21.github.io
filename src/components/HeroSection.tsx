@@ -76,7 +76,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       category: "User Uploaded",
       videoUrl: customVideoUrl.trim(),
       posterUrl: selectedPreset.posterUrl,
-      description: "Custom video integrated directly into Alex Vance's portfolio composition."
+      description: "Custom video integrated into Bui Quang Tuan's portfolio composition."
     };
     setSelectedPreset(customPreset);
     setShowVideoConfig(false);
@@ -99,15 +99,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             {/* Top Chapter Tagline */}
             <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-md border border-neutral-300 dark:border-neutral-800 bg-neutral-200/40 dark:bg-neutral-900/40 text-xs font-mono text-neutral-600 dark:text-neutral-400">
               <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
-              <span className="text-amber-600 dark:text-amber-400 font-semibold uppercase tracking-wider">SMU MITB Portfolio</span>
-              <span>// 2026 Narrative</span>
+              <span className="text-amber-600 dark:text-amber-400 font-semibold uppercase tracking-wider">AI Engineer Portfolio</span>
+              <span>// 2026</span>
             </div>
 
             {/* Oversized Art-Directed Title */}
             <div className="space-y-2">
               <h1 className="text-5xl sm:text-7xl lg:text-8xl font-serif font-extrabold tracking-tight text-neutral-900 dark:text-neutral-50 leading-[0.95]">
-                ALEX <br />
-                <span className="italic font-light text-neutral-500 dark:text-neutral-400 font-sans">VANCE</span>
+                BUI <br />
+                <span className="italic font-light text-neutral-500 dark:text-neutral-400 font-sans">QUANG TUAN</span>
               </h1>
               <p className="text-lg sm:text-xl font-mono text-amber-600 dark:text-amber-400 font-medium tracking-tight pt-2">
                 {PERSONAL_INFO.tagline}
@@ -117,10 +117,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             {/* Unconventional Narrative Intro */}
             <div className="max-w-xl text-neutral-700 dark:text-neutral-300 text-base sm:text-lg leading-relaxed font-sans space-y-4">
               <p>
-                A personal progression site presenting my application to <strong className="font-semibold text-neutral-900 dark:text-neutral-100">SMU's Master of IT in Business (MITB)</strong>.
+                A portfolio showcasing my work as an <strong className="font-semibold text-neutral-900 dark:text-neutral-100">AI Engineer</strong> — building autonomous agents, end-to-end data pipelines, and AI-powered applications at enterprise scale.
               </p>
               <p className="text-sm font-mono text-neutral-500 dark:text-neutral-400 border-l-2 border-amber-500 pl-4 py-0.5">
-                "Not displaying credentials—telling the story of how consumer psychology and strategic marketing evolved into executable code and algorithmic systems."
+                "From raw data to intelligent decisions — I build the systems that bridge both."
               </p>
             </div>
 
@@ -133,7 +133,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 }}
                 className="px-6 py-3.5 rounded-full bg-neutral-900 text-neutral-100 dark:bg-neutral-100 dark:text-neutral-900 text-sm font-mono font-medium hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-all flex items-center space-x-2 group cursor-pointer shadow-md"
               >
-                <span>Read 3-Chapter Story</span>
+                <span>Read My Journey</span>
                 <ArrowDownRight className="w-4 h-4 text-amber-400 dark:text-amber-600 group-hover:translate-x-0.5 group-hover:translate-y-0.5 transition-transform" />
               </button>
 
@@ -156,17 +156,17 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 className="px-5 py-3.5 rounded-full border border-amber-500/30 bg-amber-500/10 text-amber-700 dark:text-amber-300 text-sm font-mono transition-all flex items-center space-x-2 cursor-pointer hover:bg-amber-500/20"
               >
                 <GraduationCap className="w-4 h-4 text-amber-500" />
-                <span>SMU MITB Pitch</span>
+                <span>Career Pitch Deck</span>
               </button>
             </div>
 
             {/* Key Capabilities Quick Tags */}
             <div className="pt-4 flex flex-wrap items-center gap-2 text-xs font-mono text-neutral-500 dark:text-neutral-400">
-              <span className="text-neutral-400 dark:text-neutral-600">Cross-Disciplinary Focus:</span>
-              <span className="px-2.5 py-1 rounded-md bg-neutral-200/60 dark:bg-neutral-800/60 text-neutral-800 dark:text-neutral-200">Marketing Analytics</span>
-              <span className="px-2.5 py-1 rounded-md bg-neutral-200/60 dark:bg-neutral-800/60 text-neutral-800 dark:text-neutral-200">TypeScript / Full-Stack</span>
-              <span className="px-2.5 py-1 rounded-md bg-neutral-200/60 dark:bg-neutral-800/60 text-neutral-800 dark:text-neutral-200">Enterprise AI</span>
-              <span className="px-2.5 py-1 rounded-md bg-neutral-200/60 dark:bg-neutral-800/60 text-neutral-800 dark:text-neutral-200">FinTech Systems</span>
+              <span className="text-neutral-400 dark:text-neutral-600">Core Skills:</span>
+              <span className="px-2.5 py-1 rounded-md bg-neutral-200/60 dark:bg-neutral-800/60 text-neutral-800 dark:text-neutral-200">AI Agents & RAG</span>
+              <span className="px-2.5 py-1 rounded-md bg-neutral-200/60 dark:bg-neutral-800/60 text-neutral-800 dark:text-neutral-200">Python / Data Engineering</span>
+              <span className="px-2.5 py-1 rounded-md bg-neutral-200/60 dark:bg-neutral-800/60 text-neutral-800 dark:text-neutral-200">Azure & GCP Cloud</span>
+              <span className="px-2.5 py-1 rounded-md bg-neutral-200/60 dark:bg-neutral-800/60 text-neutral-800 dark:text-neutral-200">PySpark & Delta Lake</span>
             </div>
 
           </div>
@@ -320,10 +320,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             <div className="p-4 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-neutral-100/60 dark:bg-neutral-900/60 text-xs font-mono space-y-1.5">
               <div className="flex items-center justify-between text-neutral-500 dark:text-neutral-400 text-[10px]">
                 <span>NARRATIVE DIRECTIVE //</span>
-                <span className="text-amber-500 font-bold">SMU MITB CANDIDATE</span>
+                <div className="text-[10px] text-amber-500 font-bold">AI ENGINEER</div>
               </div>
               <p className="text-neutral-800 dark:text-neutral-200 italic font-serif text-sm">
-                "Video as a design element, not just a background: symbolizing the continuous motion of high-velocity data and real-time user experiences."
+                "Every data pipeline tells a story. I build the infrastructure to make sure that story gets heard — at scale, in real time."
               </p>
             </div>
 
@@ -337,7 +337,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-12 flex items-center justify-between text-xs font-mono text-neutral-500 dark:text-neutral-400 border-t border-neutral-200/60 dark:border-neutral-800/60">
         <div className="flex items-center space-x-2">
           <Compass className="w-4 h-4 text-amber-500 animate-spin" style={{ animationDuration: '10s' }} />
-          <span>CHAPTER 01: MARKETING & EDUCATION NEXT</span>
+          <span>CHAPTER 01: EDUCATION & FULLSTACK FOUNDATION NEXT</span>
         </div>
         <div className="hidden sm:flex items-center space-x-4 text-[11px]">
           <span>SCROLL FOR 3-CHAPTER NARRATIVE</span>
